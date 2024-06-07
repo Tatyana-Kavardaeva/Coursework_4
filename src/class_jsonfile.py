@@ -17,7 +17,8 @@ class JsonFile(AbstractFile):
 
     @staticmethod
     def json_to_vacancy(json_vacancy):
-        return Vacancy(json_vacancy['name'], json_vacancy['salary'], json_vacancy['area'], json_vacancy['url'])
+        return Vacancy(json_vacancy['name'], json_vacancy['salary'], json_vacancy['snippet'],
+                       json_vacancy['area'], json_vacancy['url'])
 
     def write_vacancies(self, vacancies_list):
         """ Записывет список вакансий """
