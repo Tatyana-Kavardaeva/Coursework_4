@@ -6,6 +6,8 @@ class Vacancy:
     url: str  # ссылка на вакансию
     salary_min: int  # минимальная зарплата
     salary_max: int  # максимальная зарплата
+    snippet: str  # требования к кандидату на вакансию
+    area: str  # местоположние
 
     def __init__(self, name='', salary=None, snippet=None, area=None, url=None):
         self.name = name
