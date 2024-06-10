@@ -7,25 +7,25 @@ from src.class_jsonfile import JsonFile
 
 @pytest.fixture()
 def vacancy1():
-    return Vacancy(name='Тест', salary=None, area='Тест', url='test@test.test')
+    return Vacancy(name='Тест', salary=None, snippet='Тест', area='Тест', url='test@test.test')
 
 
 @pytest.fixture()
 def vacancy2():
-    return Vacancy(name='Тест2', salary={'from': 70000, 'to': None, 'currency': 'RUR', 'gross': False}, area='Тест2',
-                   url='test2@test.test')
+    return Vacancy(name='Тест2', salary={'from': 70000, 'to': None, 'currency': 'RUR', 'gross': False},
+                   snippet='Тест2', area='Тест2', url='test2@test.test')
 
 
 @pytest.fixture()
 def vacancy3():
     return Vacancy(name='Тест3', salary={'from': None, 'to': 110000, 'currency': 'RUR', 'gross': True}, area='Тест3',
-                   url='test3@test.test')
+                   snippet='Тест3', url='test3@test.test')
 
 
 @pytest.fixture()
 def vacancy4():
     return Vacancy(name='Тест4', salary={'from': 50000, 'to': 50000, 'currency': 'RUR', 'gross': True}, area='Тест4',
-                   url='test4@test.test')
+                   snippet='Тест4', url='test4@test.test')
 
 
 @pytest.fixture()
@@ -91,7 +91,8 @@ def data():
 
 @pytest.fixture()
 def list_vacancies():
-    list_vacancies = [Vacancy(name=f'Python developer (Junior)', salary={'from': 50000, 'to': None, 'currency': 'RUR', 'gross': False}, area=f'Владивосток', url=f'https://hh.ru/vacancy/101219641'), Vacancy(name='Стажер IT направления', salary={'from': 70000, 'to': 70000, 'currency': 'RUR', 'gross': True}, area=f'Москва', url=f'https://hh.ru/vacancy/101287743')]
+    list_vacancies = [Vacancy(name=f'Python developer (Junior)', salary={'from': 50000, 'to': None, 'currency': 'RUR', 'gross': False}, url=f'https://hh.ru/vacancy/101219641'),
+                      Vacancy(name=f'Стажер IT направления', salary={'from': 70000, 'to': 70000, 'currency': 'RUR', 'gross': True}, area=f'Москва', url=f'https://hh.ru/vacancy/101287743')]
     return list_vacancies
 
 
