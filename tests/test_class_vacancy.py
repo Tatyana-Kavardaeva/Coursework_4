@@ -4,6 +4,7 @@ import pytest
 def test_vacancy_init(vacancy1):
     assert vacancy1.name == 'Тест'
     assert vacancy1.salary == 'Зарплата не указана'
+    assert vacancy1.snippet == 'Тест'
     assert vacancy1.area == 'Тест'
     assert vacancy1.url == 'test@test.test'
     assert vacancy1.salary_min == 0
@@ -31,21 +32,25 @@ def test_vacancy_salary(vacancy2, vacancy3, vacancy4):
 def test_vacancy_str(vacancy1, vacancy2, vacancy3, vacancy4):
     assert str(vacancy1) == f'Название вакансии: Тест\n' \
                             f'Зароботная плата: не указана\n' \
+                            f'Требования: Тест\n' \
                             f'Город: Тест\n' \
                             f'Ссылка на вакансию: test@test.test\n'
 
     assert str(vacancy2) == f'Название вакансии: Тест2\n' \
                             f'Зароботная плата: от 70000 RUR\n' \
+                            f'Требования: Тест2\n'\
                             f'Город: Тест2\n' \
                             f'Ссылка на вакансию: test2@test.test\n'
 
     assert str(vacancy3) == f'Название вакансии: Тест3\n' \
                             f'Зароботная плата: до 110000 RUR\n' \
+                            f'Требования: Тест3\n'\
                             f'Город: Тест3\n' \
                             f'Ссылка на вакансию: test3@test.test\n'
 
     assert str(vacancy4) == f'Название вакансии: Тест4\n' \
                             f'Зароботная плата: от 50000 до 50000 RUR\n' \
+                            f'Требования: Тест4\n'\
                             f'Город: Тест4\n' \
                             f'Ссылка на вакансию: test4@test.test\n'
 
